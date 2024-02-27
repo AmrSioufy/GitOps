@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: postgres
+  namespace: amrgitops
+  labels:
+    app: postgres
+spec:
+  selector:
+    app: postgres
+  ports:
+  - protocol: TCP
+    port: 5434
+    targetPort: 5432
